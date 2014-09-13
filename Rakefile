@@ -5,7 +5,7 @@ REDCAR_LICENSE     = "GPL v2"
 REDCAR_VENDOR      = "n/a"
 REDCAR_URL         = "http://redcareditor.com"
 
-JRUBY_JAR_LOCATION = "http://jruby.org.s3.amazonaws.com/downloads/1.6.7/jruby-complete-1.6.7.jar"
+JRUBY_JAR_LOCATION = "http://jruby.org.s3.amazonaws.com/downloads/1.7.15/jruby-complete-1.7.15.jar"
 REDCAR_ROOT        = File.expand_path("../", __FILE__)
 
 require 'fileutils'
