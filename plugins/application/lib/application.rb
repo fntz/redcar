@@ -195,7 +195,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('application_plugin')
         storage.set_default('stay_resident_after_last_window_closed', false)
         storage.set_default('show_toolbar', Redcar.platform != :osx)

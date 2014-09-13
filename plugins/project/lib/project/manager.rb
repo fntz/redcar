@@ -41,7 +41,7 @@ module Redcar
       end
 
       def self.storage
-        @storage ||= begin
+        @@storage ||= begin
           storage = Plugin::Storage.new('project_plugin')
           storage.set_default('reveal_files_in_project_tree',true)
           storage.set_default('reveal_files_only_when_tree_is_focussed',true)

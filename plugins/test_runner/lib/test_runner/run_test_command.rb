@@ -8,7 +8,7 @@ module Redcar
     }
     
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('test_runner')
         storage.set_default('test_runners', [
           {

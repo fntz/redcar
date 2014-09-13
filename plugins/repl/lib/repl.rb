@@ -19,7 +19,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('repl')
         storage.set_default(
           'command_history_buffer_size',

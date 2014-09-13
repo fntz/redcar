@@ -64,7 +64,7 @@ module Redcar
       end
       
       def self.storage
-        @storage ||= begin
+        @@storage ||= begin
           storage = Plugin::Storage.new('filter_list_dialog_controller')
           storage.set_default('pause_before_update_seconds', 0.25)
           storage

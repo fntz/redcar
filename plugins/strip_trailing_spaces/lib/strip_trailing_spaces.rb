@@ -18,7 +18,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('strip_trailing_spaces_plugin')
         storage.set_default('enabled', false)
         storage.set_default('strip_blank_lines', false)

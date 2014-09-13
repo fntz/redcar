@@ -91,11 +91,11 @@ module Redcar
 
     class Storage < Plugin::BaseStorage
       def self.storage_dir=(value)
-        @user_dir = value
+        @@user_dir = value
       end
 
       def self.storage_dir
-        @user_dir ||= File.join(Redcar.user_dir, "storage")
+        @@user_dir ||= File.join(Redcar.user_dir, "storage")
       end
 
       def initialize(name)

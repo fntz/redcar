@@ -23,7 +23,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('todo_list_plugin')
         storage.set_default('included_suffixes', ['.java','.rb','.groovy','.erb','.gsp','.html','.js'])
         storage.set_default('excluded_files', ['jquery.js','prototype.js'])

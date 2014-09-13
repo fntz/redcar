@@ -6,7 +6,7 @@ module Redcar
       
       # Create menus for recent files and directories
       def self.storage
-        @storage ||= begin
+        @@storage ||= begin
           storage = Plugin::Storage.new('recent')
           storage.set_default('list', [])
           storage.set_default('max_list_length', 100)

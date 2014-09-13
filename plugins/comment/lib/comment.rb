@@ -13,7 +13,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||=begin
+      @@storage ||=begin
         storage = Plugin::Storage.new('comment_plugin')
         storage.set_default('default_line_comment'       , "#")
         storage.set_default('default_start_block'        , "/*")

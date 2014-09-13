@@ -43,7 +43,7 @@ class ProjectSearch
   end
 
   def self.storage
-    @storage ||= begin
+    @@storage ||= begin
       storage = Redcar::Plugin::Storage.new('find_in_project')
       storage.set_default('recent_queries', [])
       storage.set_default('excluded_dirs', ['.git', '.svn', '.redcar'])

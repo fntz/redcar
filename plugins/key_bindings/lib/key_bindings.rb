@@ -14,7 +14,7 @@ module Redcar
         begin
           h[key] = eval(command_class)
         rescue
-          Redcar.log.warn "invalid key binding from \"#{key}\" to #{command_class.inspect} in file \"#{@storage.send(:path)}\""
+          Redcar.log.warn "invalid key binding from \"#{key}\" to #{command_class.inspect} in file \"#{@@storage.send(:path)}\""
         end
         h
       end
@@ -22,7 +22,7 @@ module Redcar
     end
     
     def self.storage
-      @storage ||= Plugin::Storage.new('key_bindings')
+      @@storage ||= Plugin::Storage.new('key_bindings')
     end
     
     def self.key_binding_prefs

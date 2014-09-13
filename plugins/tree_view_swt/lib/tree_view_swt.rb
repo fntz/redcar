@@ -7,7 +7,7 @@ module Redcar
     extend Forwardable
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
          storage = Plugin::Storage.new('tree_view_swt_plugin')
          storage.set_default('refresh_trees_on_refocus', true)
          storage

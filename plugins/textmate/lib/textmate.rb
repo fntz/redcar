@@ -132,7 +132,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('textmate')
         storage.set_default('load_bundles_menu',false)
         storage.set_default('select_bundles_for_menu',true)

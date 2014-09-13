@@ -149,7 +149,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('runnables')
         storage.set_default('save_project_before_running', false)
         storage

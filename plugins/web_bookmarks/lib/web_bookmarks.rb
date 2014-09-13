@@ -8,7 +8,7 @@ module Redcar
     BOOKMARKS_FILE = "web_bookmarks.json"
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
          storage = Plugin::Storage.new('web_bookmarks')
          storage.set_default('show_browser_bar_on_start', true)
          storage

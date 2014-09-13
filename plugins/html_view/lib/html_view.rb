@@ -35,7 +35,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
          storage = Plugin::Storage.new('html_view')
          storage.set_default('use_external_browser_for_urls', false)
          storage

@@ -86,11 +86,11 @@ module Redcar
     end
 
     def self.tab_settings
-      @tab_settings ||= TabSettings.new
+      @@tab_settings ||= TabSettings.new
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         store = Plugin::Storage.new('edit_view_plugin')
         store.set_default('indent_selection_on_tab', true)
         store

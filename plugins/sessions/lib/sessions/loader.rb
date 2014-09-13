@@ -15,7 +15,7 @@ class Sessions
     end
     
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Redcar::Plugin::Storage.new('project_loader')
         storage.set_default('restore_open_files_on_load', true)
         storage.set_default('save_open_files_on_close',   true)

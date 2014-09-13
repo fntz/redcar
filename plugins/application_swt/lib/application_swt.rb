@@ -74,7 +74,7 @@ module Redcar
     }
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('application_swt')
         storage.set_default('selected_tab_background', {0 => "#FEFEFE", 100 => "#EEEEEE"})
         storage.set_default('unselected_tab_background', {0 => "#E5E5E5", 100 => "#D0D0D0"})

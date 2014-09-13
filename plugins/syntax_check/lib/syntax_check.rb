@@ -57,7 +57,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('syntax_checking')
         storage.set_default('suppress_message_dialogs',false)
         storage.set_default('suppress_syntax_checking',false)

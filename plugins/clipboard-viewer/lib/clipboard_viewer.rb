@@ -17,7 +17,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
          storage = Plugin::Storage.new('clipboard_viewer')
          storage.set_default('chars_to_display', 50)
          storage.set_default('lines_to_display', 3)

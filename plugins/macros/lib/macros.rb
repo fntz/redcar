@@ -38,7 +38,7 @@ module Redcar
     end
 
     def self.storage
-      @storage ||= begin
+      @@storage ||= begin
         storage = Plugin::Storage.new('macros')
         storage.set_default('saved_macros', [])
         storage
