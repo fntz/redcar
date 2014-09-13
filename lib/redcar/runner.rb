@@ -4,7 +4,7 @@ module Redcar
     def run
       forking = ARGV.include?("--fork")
       no_runner = ARGV.include?("--no-sub-jruby")
-      jruby = Config::CONFIG["RUBY_INSTALL_NAME"] == "jruby"
+      jruby = RbConfig::CONFIG["RUBY_INSTALL_NAME"] == "jruby"
       osx = (not [:linux, :windows].include?(Redcar.platform))
       begin
         if forking and not jruby
@@ -90,7 +90,7 @@ module Redcar
     
     def java_args
       str = []
-      if Config::CONFIG["host_os"] =~ /darwin/
+      if RbConfig::CONFIG["host_os"] =~ /darwin/
         str.push "-XstartOnFirstThread"
       end
       

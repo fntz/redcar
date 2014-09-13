@@ -28,7 +28,7 @@ module RedcarBundles
 end
 
 begin
-  if Config::CONFIG["RUBY_INSTALL_NAME"] == "jruby"
+  if RbConfig::CONFIG["RUBY_INSTALL_NAME"] == "jruby"
 =begin
     gem "spoon"
     require 'spoon'

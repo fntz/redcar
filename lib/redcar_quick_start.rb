@@ -81,7 +81,7 @@ module Redcar
   #
   # @return [:osx/:windows/:linux]
   def self.platform
-    case Config::CONFIG["target_os"]
+    case RbConfig::CONFIG["target_os"]
     when /darwin/
       :osx
     when /mswin|mingw/
